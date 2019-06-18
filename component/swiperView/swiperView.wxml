@@ -1,0 +1,16 @@
+<swiper 
+indicator-dots="{{indicatorDots}}"
+autoplay="{{autoplay}}" 
+interval="{{interval}}" 
+duration="{{duration}}"
+circular="{{circular}}" 
+indicator-active-color="{{indicatorActiveColor}}"
+vertical="{{vertical}}"
+style="height: {{swiperHeight}}"
+>
+  <block wx:for="{{imgUrls}}" wx:key="*this">
+    <swiper-item bindtap="swiperItemTap" data-index='{{index}}'>
+      <image src="{{item}}" class="slide-image"/>
+    </swiper-item>
+  </block>
+</swiper>

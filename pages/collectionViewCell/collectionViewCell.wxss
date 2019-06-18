@@ -1,11 +1,25 @@
 .cell {
     margin: 10rpx;
 }
+.selectedBackground {
+    background-color: #D8D8D8
+}
 .content {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
+}
+.image {
+    padding: 10rpx;
+    border: 1rpx solid #E1E1E1;
+    margin-bottom: 10rpx;
 }
 .title {
     font-size: 26rpx;
+    text-align: center;
+    width: 100%; 
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; 
 }

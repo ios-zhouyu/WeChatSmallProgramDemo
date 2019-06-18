@@ -28,7 +28,13 @@ Component({
      * 组件的方法列表
      */
     methods: {
-
+        selectedItem: function(event) {
+            let detail = {
+                imageUrl: this.properties.imageUrl,
+                title: this.properties.title
+            }
+            this.triggerEvent("selectedCell",detail,{})
+        }
     },
 
     lifetimes: {
@@ -36,7 +42,7 @@ Component({
         attached: function () { 
             let screenWidth = wx.getSystemInfoSync().windowWidth
             this.setData({
-                imageWidth: screenWidth / 4 + 'rpx'
+                imageWidth: screenWidth / 3 + 'rpx'
             })
         },
         moved: function () { },

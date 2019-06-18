@@ -1,4 +1,8 @@
-<view class='cell'>
+<view 
+class='cell' 
+hover-class='selectedBackground'
+bindtap='selectedItem'
+>
     <view class='content'>
         <image src='{{imageUrl}}' class='image' model='scaleToFill' style='width: {{imageWidth}}; height: {{imageWidth}}'></image>
         <label class='title'>{{title}}</label>

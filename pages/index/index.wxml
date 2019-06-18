@@ -1,11 +1,18 @@
 <!--index.wxml-->
 <view class="container">
+    <swiperView 
+    swiperHeight='400rpx;'
+    indicatorActiveColor='#00FF00'
+    imgUrls='{{imgUrls}}'
+    bind:swiperViewTap="swiperViewTap"
+    ></swiperView>
     <view class='collectionView'>
         <collectionViewCell 
         imageUrl='{{item.imageUrl}}' 
         title='{{item.title}}'
         wx:for='{{list}}' wx:key='{{index}}'
         style='width: 25%;'
+        bind:selectedCell='selectedCell'
         >
         </collectionViewCell>
     </view>
