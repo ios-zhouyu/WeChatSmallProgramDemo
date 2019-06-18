@@ -1,0 +1,6 @@
+<view>
+    <label>{{title}}</label>
+    <view></view>
+    <label>{{subTitle}}</label>
+    <button type="primary" bindtap='popBack'>点击返回</button>
+</view>

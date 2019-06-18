@@ -1,0 +1,11 @@
+.cell {
+    margin: 10rpx;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.title {
+    font-size: 26rpx;
+}

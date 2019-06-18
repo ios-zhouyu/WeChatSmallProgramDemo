@@ -1,6 +1,14 @@
 <view>
+    <view class='topView' style='padding: {{topPadding}}'>{{topTitle}}</view>
     <scroll-view scroll-y="true">
-        <view wx:for='{{listArr}}' wx:for-index='index' wx:for-item="item" wx:key='*this' class='itemView' bindtap='didSelectedItem' data-index='{{index}}'>
+        <view 
+        wx:for='{{listArr}}' 
+        wx:key='*this' 
+        class='itemView' 
+        bindtap='didSelectedItem' 
+        data-index='{{index}}' 
+        hover-class='selectedBackground'
+        >
             <view class='content'>
                 <view class='leftView'>
                     <label class='title'>{{item.title}}</label>

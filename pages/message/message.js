@@ -36,6 +36,8 @@ var list = [
 Page({
     data: {
         text: "This is page data.",
+        topTitle: '',
+        topPadding: '',
         listArr: []
     },
     onLoad: function (options) {
@@ -85,7 +87,9 @@ Page({
     didSelectedItem: function(event) {
         var index = parseInt(event.currentTarget.dataset.index)
         var data = this.data.listArr[index]
-        console.log(data)
+        wx.navigateTo({
+            url: 'messageDetail/messageDetail?' + 'title=' + data.title + '&subTitle=' + data.subTitle
+        })
     },
     customData: {
         hi: 'MINA'

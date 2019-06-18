@@ -1,12 +1,21 @@
+.topView {
+    background-color: #E1E1E1;
+    align-items: center;
+    text-align: center;
+}
 .itemView {
     display: flex;
     flex-direction: column;
-    padding: 10rpx 20rpx;
+    padding: 10rpx 20rpx 0rpx 20rpx;
+}
+.selectedBackground {
+    background-color: #D8D8D8
 }
 .content {
     display: flex;
     flex-direction: row;
     padding-bottom: 20rpx;
+    padding-top: 10rpx;
     border-bottom: 1rpx solid #E1E1E1;
 }
 
