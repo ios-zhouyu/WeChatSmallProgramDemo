@@ -1,0 +1,51 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/message/message",
+        "pages/public/public",
+        "pages/zone/zone",
+        "pages/logs/logs"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "WeChat",
+        "navigationBarTextStyle": "black"
+    },
+    "sitemapLocation": "sitemap.json",
+    "tabBar": {
+        "list": [
+        {
+            "pagePath": "pages/index/index",
+            "iconPath": "images/tabbar/wxFriend_unInstall@2x.png",
+            "selectedIconPath": "images/tabbar/wxFriend@2x.png",
+            "text": "首页"
+        },
+        {
+            "pagePath": "pages/message/message",
+            "iconPath": "images/tabbar/qqFriend_unInstall@2x.png",
+            "selectedIconPath": "images/tabbar/qqFriend@2x.png",
+            "text": "消息"
+        },
+        {
+            "pagePath": "pages/public/public",
+            "iconPath": "images/tabbar/sms_unInstall@2x.png",
+            "selectedIconPath": "images/tabbar/sms@2x.png",
+            "text": "广场"
+        },
+        {
+            "pagePath": "pages/zone/zone",
+            "iconPath": "images/tabbar/qqZone_unInstall@2x.png",
+            "selectedIconPath": "images/tabbar/qqZone@2x.png",
+            "text": "空间"
+        },
+        {
+            "pagePath": "pages/logs/logs",
+            "iconPath": "images/tabbar/wb_unInstall@2x.png",
+            "selectedIconPath": "images/tabbar/wb@2x.png",
+            "text": "个人中心"
+        }
+        ]
+    },
+    "debug": true
+}

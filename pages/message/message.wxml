@@ -1,0 +1,15 @@
+<view>
+    <scroll-view scroll-y="true">
+        <view wx:for='{{listArr}}' wx:for-index='index' wx:for-item="item" wx:key='*this' class='itemView' bindtap='didSelectedItem' data-index='{{index}}'>
+            <view class='content'>
+                <view class='leftView'>
+                    <label class='title'>{{item.title}}</label>
+                    <label class='subTitle'>{{item.subTitle}}</label>
+                </view>
+                <view class='rightView'>
+                    <image src='../../images/arrow/arrow_gray_04@2x.png' class='arrow'></image>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+</view>
