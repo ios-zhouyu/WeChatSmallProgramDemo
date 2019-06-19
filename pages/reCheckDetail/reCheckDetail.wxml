@@ -1,3 +1,23 @@
-<view>
-<image src='{{imageUrl}}'></image>
+<view class='container'>
+    <view class='name'>
+        <label>{{model.name}}</label>
+    </view>
+    <view wx:for='{{model.dataArr}}' wx:key='*this' class='cell'>
+        <view class='item'>
+            <view class='itemLeftView'>
+                <label>●</label>
+            </view>
+            <view class='itemRightView'>
+                <label class='itemRightKey'>{{item.key}}</label>
+                <label class='itemRightValue'>{{item.value}}</label>
+            </view>
+        </view>
+    </view>
+    <view class='tipView'>
+        <label class='tipLabel'>本模板由XXXXX医生提供</label>
+    </view>
+
+    <view class='bottomView'>
+        <button class='saveButtton'>保存模板</button>
+    </view>
 </view>

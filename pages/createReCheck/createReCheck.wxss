@@ -1,0 +1,85 @@
+scroll-view {
+    display: flex;
+    background-color: #FFFFFF;
+}
+.baseView {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30rpx;
+    margin-right: 30rpx;
+}
+.textareaBaseView {
+    display: flex;
+    border: 1rpx solid #DCDCDC;
+    border-radius: 8rpx;
+    width: 100%;
+}
+textarea {
+    width: 100%;
+    font-size: 32rpx;
+    margin: 10rpx;
+}
+.title {
+    display: flex;
+    font-size: 36rpx;
+    color: #000000;
+    margin: 40rpx 0rpx 20rpx 0rpx;
+    width: 100%;
+}
+.dateView {
+    display: flex;
+    align-items: center;
+    border: 1rpx solid #DCDCDC;
+    border-radius: 8rpx;
+    height: 88rpx;
+}
+.selectedBaseView {
+    display: flex;
+    align-items: center;
+    height: 90rpx;
+    position: relative;
+}
+.dataLabel {
+    display: flex;
+    margin-left: 20rpx;
+    font-size: 32rpx;
+    width: 100%;
+}
+.dataImage {
+    position: absolute;
+    right: 30rpx;
+    bottom: 35rpx;
+    width: 30rpx;
+    height: 16rpx;
+}
+
+.tipView {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20rpx;
+}
+.tipLabel {
+    margin-top: 10rpx;
+    margin-bottom: 160rpx;
+    color: #666666;
+    font-size: 28rpx;
+}
+.bottomView {
+    display: flex;
+    position: fixed;
+    bottom: 0rpx;
+    left: 0rpx;
+    right: 0rpx;
+    height: 120rpx;
+    border-top: 1rpx solid #DCDCDC;
+    align-items: center;
+    background-color: #F8F8F8;
+}
+
+.previewButton {
+    width: 380rpx;
+    height: 84rpx;
+    font-size: 38rpx;
+}

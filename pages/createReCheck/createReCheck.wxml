@@ -1,0 +1,47 @@
+<view>
+    <scroll-view>
+        <view class='baseView'>
+            <label class='title'>模版名称：</label>
+            <view class='textareaBaseView' style='height: 88rpx;'>
+                <textarea placeholder='如：心脏房颤消融术后康复' style='height: 48rpx;' adjust-position bindinput='textareaDidChanged' id='name'></textarea>
+            </view>
+        </view>
+        <view class='baseView'>
+            <label class='title'>复查项目（选填）：</label>
+            <view class='textareaBaseView' style='height: 140rpx;'>
+                <textarea placeholder='如：服用药物有肝损伤，需要定期监控' style='height: 100rpx;' adjust-position bindinput='textareaDidChanged' id='project'></textarea>
+            </view>
+        </view>
+        <view class='baseView'>
+            <label class='title'>复查目的：</label>
+            <view class='textareaBaseView' style='height: 140rpx;'>
+                <textarea placeholder='如：服用药物有肝损伤，需要定期监控' style='height: 100rpx;' adjust-position bindinput='textareaDidChanged' id='purpose'></textarea>
+            </view>
+        </view>
+        <view class='baseView'>
+            <label class='title'>是否经常需要检查（选填）：</label>
+            <picker class='dateView' bindchange="bindPickerChange" value="{{index}}" range="{{arr}}">
+                <view class='selectedBaseView' style='width: {{pikerViewWidth}}'>
+                    <view style='color: {{dateColor}}' class='dataLabel'>{{dateText}}</view>
+                    <image src='../../images/arrow/arrow_grey_down_disable@2x.png' class='dataImage'></image>
+                </view>
+            </picker>
+        </view>
+        <view class='baseView'>
+            <label class='title'>不复查有哪些风险：</label>
+            <view class='textareaBaseView' style='height: 140rpx;'>
+                <textarea placeholder='如：病情复发' style='height: 100rpx;' adjust-position bindinput='textareaDidChanged' id='risk'></textarea>
+                </view>
+        </view>
+        <view class='baseView'>
+            <view class='tipView'>
+                <label class='title'>模版名称：</label>
+                <switch checked='true' bindchange='switchTap'></switch>
+            </view>
+            <label class='tipLabel'><text style='color: #FF4D52'>*</text>共享后将在模版上署上您的姓名</label>
+        </view>
+    </scroll-view>
+    <view class='bottomView'>
+        <button class='previewButton' bindtap='previewButtonTap' style='color: {{buttonTextColor}}; background-color: {{buttonBackGroundColor}};'>预览</button>
+    </view>
+</view>

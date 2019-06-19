@@ -4,7 +4,9 @@
         "pages/message/message",
         "pages/public/public",
         "pages/zone/zone",
-        "pages/logs/logs"
+        "pages/logs/logs",
+
+        "pages/createReCheck/createReCheck"
     ],
     "window": {
         "backgroundTextStyle": "light",

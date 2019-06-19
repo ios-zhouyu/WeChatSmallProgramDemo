@@ -4,20 +4,19 @@ Page({
  * 页面的初始数据
  */
 data: {
-    title: "",
-    imageUrl: ""
+    model: new Object()
 },
 
 /**
  * 生命周期函数--监听页面加载
  */
 onLoad: function (options) {
+    console.log(JSON.parse(options.modelString))
     this.setData({
-        title: options.title,
-        imageUrl: options.imageUrl
+        model: JSON.parse(options.modelString)
     })
     wx.setNavigationBarTitle({
-        title: options.title,
+        title: '复查复诊详情页',
     })
 },
 
