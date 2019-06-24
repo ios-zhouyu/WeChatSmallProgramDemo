@@ -1,0 +1,13 @@
+<view class='item' hover-class='selectedBackground'>
+    <view class='content'>
+        <slot name='imageView'></slot>
+        <view class='leftView'>
+            <text class='title'>{{title}}</text>
+            <text class='subtitle'>{{subtitle}}</text>
+        </view>
+        <view class='rightView'>
+            <slot name='rightTipView'></slot>
+            <image src='../../images/arrow/arrow_gray_04@2x.png' class='arrow'></image>
+        </view>
+    </view>
+</view>

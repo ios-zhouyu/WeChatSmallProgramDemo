@@ -1,30 +1,27 @@
 .container {
     display: flex;
+    flex-direction: column;
 }
 
-.item {
+.imageView {
     display: flex;
-    background-color: #00ff00;
-    flex: 1;
+    margin: 20rpx 20rpx 20rpx 0rpx;
 }
 
-.content {
+.imageView image {
     display: flex;
-    flex-direction: row;
-    background-color: #ABABAB;
-    flex: 1;
-    padding: 10rpx;
-    align-items: center;
+    width: 80rpx;
+    height: 80rpx;
 }
 
-.leftView {
+.rigTipView {
     display: flex;
-    flex: auto;
-    background-color: #ff0000;
+    margin-left: 10rpx;
 }
 
-.rightView {
-    display: flex;
-    width: 120rpx;
-    background-color: #00ffff;
+.rigTipView text {
+    color: #666666;
 }
+
+
+

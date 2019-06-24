@@ -1,8 +1,15 @@
 <view class='container'>
-    <view class='item'>
-        <view class='content'>
-            <view class='leftView'>左边视图</view>
-            <view class='rightView'>右接诶偶发而我方</view>
-        </view>
-    </view>
+    <block wx:for='{{list}}' wx:key='*this'>
+        <tableViewDefaultCell 
+        title='{{item.title}}' 
+        subtitle='{{item.subtitle}}'
+        >
+            <view class='imageView' slot='imageView'>
+                <image src='../../images/tabbar/qqFriend@2x.png'></image>
+            </view>
+            <view class='rigTipView' slot='rightTipView'>
+                <text>sfe</text>
+            </view>
+        </tableViewDefaultCell>
+    </block>
 </view>

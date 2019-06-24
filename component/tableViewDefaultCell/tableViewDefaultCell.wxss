@@ -1,0 +1,50 @@
+.item {
+    display: flex;
+    flex: 1;
+}
+
+.selectedBackground {
+    background-color: #D8D8D8
+}
+
+.content {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    margin: 0rpx 20rpx;
+    border-bottom: 1rpx solid #DADADA;
+    align-items: center;
+}
+
+.leftView {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin: 20rpx 0rpx;
+}
+
+.leftView .title {
+    display: flex;
+    font-size: 36rpx;
+    color: #000000;
+}
+
+.leftView .subtitle {
+    display: flex;
+    font-size: 30rpx;
+    color: #999999;
+    margin-top: 20rpx;
+}
+
+.rightView {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.rightView .arrow {
+    display: felx;
+    width: 24rpx;
+    height: 44rpx;
+    margin-left: 10rpx;
+}
