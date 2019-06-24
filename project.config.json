@@ -40,7 +40,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
+			"current": 2,
 			"list": [
 				{
 					"id": -1,
@@ -53,6 +53,13 @@
 					"id": -1,
 					"name": "新建复查复诊",
 					"pathName": "pages/createReCheck/createReCheck",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "空间",
+					"pathName": "pages/zone/zone",
 					"scene": null
 				}
 			]

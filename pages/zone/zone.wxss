@@ -1,1 +1,30 @@
-/* pages/zone/zone.wxss */
+.container {
+    display: flex;
+}
+
+.item {
+    display: flex;
+    background-color: #00ff00;
+    flex: 1;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    background-color: #ABABAB;
+    flex: 1;
+    padding: 10rpx;
+    align-items: center;
+}
+
+.leftView {
+    display: flex;
+    flex: auto;
+    background-color: #ff0000;
+}
+
+.rightView {
+    display: flex;
+    width: 120rpx;
+    background-color: #00ffff;
+}

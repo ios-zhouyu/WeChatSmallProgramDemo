@@ -1,8 +1,6 @@
-Page({
+var HDFNet = require('../../module/HDFNet.js')
 
-    /**
-     * 页面的初始数据
-     */
+Page({
     data: {
         dateColor: '#999999',
         buttonTextColor: '#FFFFFF',
@@ -21,9 +19,6 @@ Page({
         isShare: true
     },
 
-    /**
-     * 生命周期函数--监听页面加载
-     */
     onLoad: function (options) {
         wx.setNavigationBarTitle({
             title: '新建复查复诊',
@@ -38,89 +33,22 @@ Page({
         this.selectedDate()
     },
 
-    /**
-     * 生命周期函数--监听页面初次渲染完成
-     */
-    onReady: function () {
-        
-    },
-
-    /**
-     * 生命周期函数--监听页面显示
-     */
-    onShow: function () {
-        
-    },
-
-    /**
-     * 生命周期函数--监听页面隐藏
-     */
-    onHide: function () {
-        
-    },
-
-    /**
-     * 生命周期函数--监听页面卸载
-     */
-    onUnload: function () {
-        
-    },
-
-    /**
-     * 页面相关事件处理函数--监听用户下拉动作
-     */
-    onPullDownRefresh: function () {
-        
-    },
-
-    /**
-     * 页面上拉触底事件的处理函数
-     */
-    onReachBottom: function () {
-        
-    },
-
-    /**
-     * 用户点击右上角分享
-     */
-    onShareAppMessage: function () {
-        
-    },
-
     selectedDate: function() {
         var self = this
         wx.showLoading({
             title: '加载中...',
         })
-        wx.request({
+
+        HDFNet.hdfRequest({
+            type: 'POST',
             url: 'http://10.1.21.216/doctorapi/teamfollowup_getSelectOptions4ReCheck',
             data: {
-                ck: '442F6766-C8B2-4920-86F1-3E35A6A17C49-i629',
-                app: 'doctor',
-                b: '822',
-                certificateToken: '2b30d3c0be7a822f2ff8cfba9f31aad6',
-                cid: '34974',
-                ct: '2b30d3c0be7a822f2ff8cfba9f31aad6',
-                deviceOpenUDID: 'd272e41e3a7694543600a6eb46ce17cab73311e7',
-                di: 'd272e41e3a7694543600a6eb46ce17cab73311e7',
-                m: 'iPhone%206%20Plus',
-                n: '2',
-                os: 'ios',
-                p: '1',
-                pt: '4047cdaee83ae014659df063452c6d22571fc04b6aafecb7ad1e7581af82ce58',
-                s: 'APPL',
-                sv: '12.2',
                 userId: '34974',
-                v: '6.2.9'
             },
-            method: 'POST',
-            header: {
-                'content-type': 'application/json'
-            },
-            success: function (res) {
+            success: function(res) {
                 wx.hideLoading()
                 if (res.statusCode == 200 && res.data.errorCode == '0') {
-                    var arr = new Array()
+                    var arr = []
                     var isNeedCheck = res.data.content.isNeedCheck
                     for (var index in isNeedCheck) {
                         arr.push(isNeedCheck[index].name)
@@ -135,15 +63,11 @@ Page({
                     })
                 }
             },
-            fail: function () {
+            fail: function(res) {
                 wx.hideLoading()
                 wx.showToast({
                     title: res.data.msg,
                 })
-            },
-            complete: function () {
-                wx.hideLoading()
-                // complete
             }
         })
     },

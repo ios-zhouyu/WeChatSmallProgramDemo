@@ -1,2 +1,8 @@
-<!--pages/zone/zone.wxml-->
-<text>pages/zone/zone.wxml</text>
+<view class='container'>
+    <view class='item'>
+        <view class='content'>
+            <view class='leftView'>左边视图</view>
+            <view class='rightView'>右接诶偶发而我方</view>
+        </view>
+    </view>
+</view>
